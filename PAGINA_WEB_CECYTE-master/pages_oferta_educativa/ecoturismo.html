@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producción Industrial de Alimentos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/PAGINA_WEB_CECYTE/style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link
+      href="https://unpkg.com/flowbite@^2.1/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://unpkg.com/flowbite@^2.1/dist/flowbite.min.js"></script>
+</head>
+<body class="bg-white-500">
+    <!-- INCIO NAVBAR CON SUBEMENUS -->
+    <nav id="navbar" class="navbar-transparent fixed w-full top-0 left-0 z-10">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="/PAGINA_WEB_CECYTE/img_logos/logo_Cecyte_vertical_sin_fondo.png" class="h-10" alt="CECYTEBCS" />
+          </a>
+          <button id="menu-toggle" data-collapse-toggle="navbar-default" type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15" />
+            </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul
+              class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              <li>
+                <a href="/PAGINA_WEB_CECYTE/index.html"
+                  class="block py-2 px-3 text-white bg-green-700 rounded md:bg-transparent md:text-green-700 md:p-0 dark:text-white md:dark:text-green-500"
+                  aria-current="page">INICIO</a>
+              </li>
+              <li>
+                <button class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-gray-100 md:border-0 md:hover:text-orange-700 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-gray-700"
+                  aria-expanded="false" aria-haspopup="true" onclick="toggleSubMenu('submenu-institucion')">INSTITUCIÓN</button>
+                <!-- Submenu for INSTITUCIÓN -->
+                <ul id="submenu-institucion" class="hidden absolute mt-2 w-48 bg-white shadow-lg rounded-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700" aria-label="submenu">
+                    <li><a href="/PAGINA_WEB_CECYTE/pages_institucion/pagina_historia.html" class="block py-2 px-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:text-gray-200">Misión ,Visión y Historia</a></li>
+                
+                    <li><a href="/PAGINA_WEB_CECYTE/pages_institucion/planteles_emsad.html" class="block py-2 px-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:text-gray-200">Instalaciones Emsad</a></li>
+                </ul>
+              </li>
+              <li>
+                <button class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-gray-100 md:border-0 md:hover:text-orange-700 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-gray-700"
+                  aria-expanded="false" aria-haspopup="true" onclick="toggleSubMenu('submenu-oferta-educativa')">OFERTA EDUCATIVA</button>
+                <!-- Submenu for OFERTA EDUCATIVA -->
+                <ul id="submenu-oferta-educativa" class="hidden absolute mt-2 w-48 bg-white shadow-lg rounded-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700" aria-label="submenu">
+                  
+                  <li><a href="/PAGINA_WEB_CECYTE/pages_oferta_educativa/mantenimiento_equipo_de_computo.html" class="block py-2 px-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:text-gray-200">SOPORTE Y MANTENIMIENTO DE EQUIPO DE CÓMPUTO</a></li>
+                  <li><a href="/PAGINA_WEB_CECYTE/pages_oferta_educativa/programacion.html" class="block py-2 px-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:text-gray-200">PROGRAMACIÓN</a></li>
+                  <li><a href="/PAGINA_WEB_CECYTE/pages_oferta_educativa/ventas.html" class="block py-2 px-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:text-gray-200">VENTAS</a></li>
+                  <li><a href="/PAGINA_WEB_CECYTE/pages_oferta_educativa/ecoturismo.html" class="block py-2 px-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:text-gray-200">ECOTURISMO</a></li>
+                  <li><a href="/PAGINA_WEB_CECYTE/pages_oferta_educativa/produccion_industrial_de_alimentos.html" class="block py-2 px-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:text-gray-200">PRODUCCIÓN INDUSTRIAL DE ALIMENTOS</a></li>
+                  <li><a href="/PAGINA_WEB_CECYTE/pages_oferta_educativa/mantenimiento_industrial.html" class="block py-2 px-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:text-gray-200">MATENIMIENTO INDUSTRIAL</a></li>
+                  <li><a href="/PAGINA_WEB_CECYTE/pages_oferta_educativa/servicios_de_hoteleria.html" class="block py-2 px-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:text-gray-200">SERVICIOS DE HOTELERÍA</a></li>
+                  
+                </ul>
+              </li>
+              <li>
+                <button class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-gray-100 md:border-0 md:hover:text-orange-700 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-gray-700"
+                  aria-expanded="false" aria-haspopup="true" onclick="toggleSubMenu('submenu-alumnos')">ALUMNOS</button>
+                <!-- Submenu for ALUMNOS -->
+                <ul id="submenu-alumnos" class="hidden absolute mt-2 w-48 bg-white shadow-lg rounded-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700" aria-label="submenu">
+                  <li><a href="#" class="block py-2 px-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:text-gray-200">Horarios</a></li>
+                  <li><a href="#" class="block py-2 px-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:text-gray-200">Calendario</a></li>
+                  <li><a href="#" class="block py-2 px-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:text-gray-200">Actividades</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="block py-2 px-3 text-orange-700 rounded hover:bg-gray-100 md:hover:bg-gray-100 md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-gray-700">DOCENTES</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="w-full h-1 bg-orange-500"></div>
+      </nav>
+      <!-- FIN NAVBAR CON SUBEMENUS -->
+
+   
+
+      <main>
+        <div class="parallax" style="background-image: url('/PAGINA_WEB_CECYTE/img_recuros_pagina/img_oferta_edu/ecoturismo/panorama_verde.jfif');">
+            <div class="container mx-auto py-24">
+                <div class="flex flex-col md:flex-row justify-between bg-orange-500 bg-opacity-75 p-8">
+                    <div class="max-h-full md:w-full animate__animated animate__fadeInRight">
+                        <h1 class="text-4xl font-bold text-white">ECOTURISMO</h1>
+                        <p class="text-lg text-white mt-4"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mx-auto p-8 bg-white shadow-lg rounded-lg">
+                <div id="accordion-collapse" data-accordion="collapse">
+                    <h3 id="accordion-heading-1">
+                        <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 hover:bg-gray-100" data-accordion-target="#accordion-body-1" aria-expanded="true" aria-controls="accordion-body-1">
+                            <span>Justificación de la carrera.</span>
+                            <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 3a1 1 0 01.707.293l5 5a1 1 0 01-1.414 1.414L10 5.414 5.707 9.707a1 1 0 01-1.414-1.414l5-5A1 1 0 0110 3z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </h3>
+                    <div id="accordion-body-1" class="hidden" aria-labelledby="accordion-heading-1">
+                        <div class="p-5 border border-b-0 border-gray-200">
+                            <p class="text-gray-500">La carrera de Técnico en Ecoturismo ofrece las competencias profesionales que permiten al egresado realizar actividades basadas en las necesidades detectadas en el ramo del turismo, el cual genera una gran derrama económica, la modalidad del turismo de naturaleza: El ecoturismo tiene a futuro un gran potencial para nuestro país.</p>
+                        </div>
+                    </div>
+                    <h3 id="accordion-heading-2">
+                        <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 hover:bg-gray-100" data-accordion-target="#accordion-body-2" aria-expanded="false" aria-controls="accordion-body-2">
+                            <span>Desarrollo Integral y Competencias Profesionales en Ecoturismo: Un Programa de Estudios para la Inserción Laboral y el Compromiso Cívico</span>
+                            <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 3a1 1 0 01.707.293l5 5a1 1 0 01-1.414 1.414L10 5.414 5.707 9.707a1 1 0 01-1.414-1.414l5-5A1 1 0 0110 3z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </h3>
+                    <div id="accordion-body-2" class="hidden" aria-labelledby="accordion-heading-2">
+                        <div class="p-5 border border-b-0 border-gray-200">
+                            <P>El programa de estudios permitirá al egresado identificar los problemas y retos teniendo en cuenta los objetivos que persigue así como sustentar una postura personal sobre temas de interés y relevancia general, considerando otros puntos de vista de manera crítica y reflexiva, también participará con una conciencia cívica y ética en la vida de su comunidad, región, México y el mundo.</P>
+
+                            <ul>
+                                <li>
+                                    Cabe resaltar que los jóvenes deberán desarrollar las habilidades necesarias para lograr su inserción laboral en organismos públicos y privados de los sectores turísticos y ecoturísticos, esta carrera en Ecoturismo ofrecerá a los egresados una opción profesional con excelentes perspectivas laborales, en áreas tan diversas como empresas de viajes especializadas en turismo de naturaleza y aventura, operadores de turismo receptivo, hoteles ecológicos, empresas de agroturismo y etnoturismo o bien en parques y áreas naturales protegidas, incluso pueden trabajar de manera independiente como guías ecoturísticos o crear su propia empresa.                                </li>
+
+                                <li>
+                                    Los primeros tres módulos de la carrera técnica tienen una duración de 272 horas cada uno, y los dos últimos de 192, un total de 1200 horas de formación profesional.
+
+                                    Cabe destacar que los módulos de formación profesional tienen carácter transdisciplinario, por cuanto corresponden con objetos y procesos de transformación que implica la integración de saberes de distintas disciplinas.                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h3 id="accordion-heading-3">
+                        <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 hover:bg-gray-100" data-accordion-target="#accordion-body-3" aria-expanded="false" aria-controls="accordion-body-3">
+                            <span>Perfil de egreso.</span>
+                            <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 3a1 1 0 01.707.293l5 5a1 1 0 01-1.414 1.414L10 5.414 5.707 9.707a1 1 0 01-1.414-1.414l5-5A1 1 0 0110 3z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </h3>
+                    <div id="accordion-body-3" class="hidden" aria-labelledby="accordion-heading-3">
+                        <div class="p-5 border border-t-0 border-gray-200">
+
+                            <p class="list-disc pl-5 text-gray-500 space-y-2">La formación que ofrece la carrera de Técnico en Ecoturismo permite al egresado, a través de la articulación de saberes de diversos campos, realizar actividades dirigidas a la demanda ecoturística correspondiente.
+
+                                Durante el proceso de formación de los cinco módulos, el estudiante desarrollará o reforzará:
+                                Las siguientes competencias profesionales:</p>
+                                <br>
+
+                            <ul class="list-disc pl-5 text-gray-500 space-y-2">
+                                <li>Fomenta la educación ambiental para un desarrollo sostenible</li>
+                                <li>Apoya en la administración de los servicios ecoturísticos para un desarrollo sostenible</li>
+                                <li>Auxilia en la coordinación de los servicios ecoturísticos para un desarrollo sostenible</li>
+                                <li>Opera el marketing y los recursos financieros dentro de los servicios ecoturísticos</li>
+                                <li>Colabora en la elaboración de proyectos y programas ecoturísticos para un desarrollo sostenible</li>
+                            </ul>
+                                <br>
+                            <p class="list-disc pl-5 text-gray-500 space-y-2">Y las competencias de empleabilidad y productividad:</p>
+                                <br>
+                            <ul class="list-disc pl-5 text-gray-500 space-y-2">
+                                <li>Planeación y organización</li>
+                                <li>Orientación a la mejora continua</li>
+                                <li>Atención al cliente</li>
+                                <li>Relaciones interpersonales</li>
+                                <li>Ética profesional</li>
+                            </ul>
+                                <br>
+                            <p class="list-disc pl-5 text-gray-500 space-y-2">El egresado de la carrera de Técnico en Ecoturismo está en posibilidades de demostrar las competencias genéricas como:</p>
+                                <br>
+                            <ul class="list-disc pl-5 text-gray-500 space-y-2">
+                                <li>Escucha, interpreta y emite mensajes pertinentes en distintos contextos mediante la utilización de medios, códigos y herramientas apropiados.</li>
+                                <li>Desarrolla innovaciones y propone soluciones a problemas a partir de métodos establecidos.</li>
+                                <li>Sustenta una postura personal sobre temas de interés y relevancia general, considerando otros puntos de vista de manera crítica y reflexiva.</li>
+                                <li>Participa con una conciencia cívica y ética en la vida de su comunidad, región, México y el mundo.</li>
+                                <li>Mantiene una actitud respetuosa hacia la interculturalidad y la diversidad de creencias, valores, ideas y prácticas sociales.</li>
+                            </ul>
+                            <br>
+                            <p class="list-disc pl-5 text-gray-500 space-y-2">Es importante recordar que, en este Modelo Educativo, el egresado de la Educación Media Superior desarrolla las competencias genéricas a partir de la contribución de las competencias profesionales al componente de formación profesional, y no en forma aislada e individual, sino a través de una propuesta de formación integral, en un marco de diversidad.</p>
+
+                        </div>
+                    </div>
+                    
+
+                    
+                </div>
+
+                <section class="py-8 px-4">
+                    <div class="max-w-4xl mx-auto text-center">
+                        <h2 class="text-2xl font-bold text-gray-700 mb-6">Mapa de competencias profesionales de la carrera de Técnico en Ecoturismo.</h2>
+                        
+                        <div class="mb-6">
+                            <img src="/PAGINA_WEB_CECYTE/img_recuros_pagina/img_oferta_edu/ecoturismo/ecoturismomapa.jpg" alt="Mapa de competencias" class="w-full h-auto rounded-lg shadow-lg">
+                        </div>
+                        
+                        <a href="https://cecytebcs.edu.mx/pdf/academico/ecoturismo.pdf" class="inline-block bg-orange-500 text-white font-semibold py-2 px-4 rounded hover:bg-orange-600 transition duration-300">
+                            Ver más detalles
+                        </a>
+                    </div>
+                </section>
+                
+                
+        </div>
+
+
+      </main>
+      <script>
+      
+        const menuToggle = document.getElementById("menu-toggle");
+        const navbar = document.getElementById("navbar-default");
+  
+  
+        document.addEventListener('DOMContentLoaded', function() {
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+          navbar.classList.remove('navbar-transparent');
+          navbar.classList.add('navbar-white');
+        } else {
+          navbar.classList.remove('navbar-white');
+          navbar.classList.add('navbar-transparent');
+        }
+      });
+    });
+  
+        function toggleSubMenu(id) {
+      const submenus = document.querySelectorAll('[aria-label="submenu"]');
+      submenus.forEach(submenu => {
+        if (submenu.id !== id) {
+          submenu.classList.add('hidden');
+          const button = document.querySelector(`[onclick="toggleSubMenu('${submenu.id}')"]`);
+          if (button) {
+            button.setAttribute('aria-expanded', 'false');
+          }
+        }
+      });
+  
+      const submenu = document.getElementById(id);
+      submenu.classList.toggle('hidden');
+      const button = document.querySelector(`[onclick="toggleSubMenu('${id}')"]`);
+      const expanded = button.getAttribute('aria-expanded') === 'true' || false;
+      button.setAttribute('aria-expanded', !expanded);
+    }
+  
+    function cancelClose(id) {
+      const submenu = document.getElementById(id);
+      submenu.classList.remove('hidden');
+    }
+        
+      </script>
+</body>
+</html>

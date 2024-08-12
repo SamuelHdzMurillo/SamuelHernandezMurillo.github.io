@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CECYTE BCS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link
+      href="https://unpkg.com/flowbite@^2.1/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://unpkg.com/flowbite@^2.1/dist/flowbite.min.js"></script>
+    
+  </head>
+  <body>
+    <!-- INCIO NAVBAR CON SUBEMENUS -->
+    <nav id="navbar" class="navbar-transparent fixed w-full top-0 left-0 z-10">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="img_logos/logo_Cecyte_vertical_sin_fondo.png" class="h-10" alt="CECYTEBCS" />
+        </a>
+        <button id="menu-toggle" data-collapse-toggle="navbar-default" type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul
+            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <li>
+              <a href="index.html"
+                class="block py-2 px-3 text-white bg-green-700 rounded md:bg-transparent md:text-green-700 md:p-0 dark:text-white md:dark:text-green-500"
+                aria-current="page">INICIO</a>
+            </li>
+            <li>
+              <button class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-gray-100 md:border-0 md:hover:text-orange-700 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-gray-700"
+                aria-expanded="false" aria-haspopup="true" onclick="toggleSubMenu('submenu-institucion')">INSTITUCIÓN</button>
+              <!-- Submenu for INSTITUCIÓN -->
+              <ul id="submenu-institucion" class="hidden absolute mt-2 w-48 bg-white shadow-lg rounded-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700" aria-label="submenu">
+                <li><a href="pages_institucion/pagina_historia.html" class="block py-2 px-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:text-gray-200">Misión ,Visión y Historia</a></li>
+                
+                <li><a href="pages_institucion/planteles_emsad.html" class="block py-2 px-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:text-gray-200">Instalaciones Emsad</a></li>
+              </ul>
+            </li>
+            <li>
+              <button class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-gray-100 md:border-0 md:hover:text-orange-700 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-gray-700"
+                aria-expanded="false" aria-haspopup="true" onclick="toggleSubMenu('submenu-oferta-educativa')">OFERTA EDUCATIVA</button>
+              <!-- Submenu for OFERTA EDUCATIVA -->
+              <ul id="submenu-oferta-educativa" class="hidden absolute mt-2 w-48 bg-white shadow-lg rounded-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700" aria-label="submenu">
+                
+                <li><a href="/PAGINA_WEB_CECYTE/pages_oferta_educativa/mantenimiento_equipo_de_computo.html" class="block py-2 px-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:text-gray-200">SOPORTE Y MANTENIMIENTO DE EQUIPO DE CÓMPUTO</a></li>
+                <li><a href="/PAGINA_WEB_CECYTE/pages_oferta_educativa/programacion.html" class="block py-2 px-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:text-gray-200">PROGRAMACIÓN</a></li>
+                <li><a href="/PAGINA_WEB_CECYTE/pages_oferta_educativa/ventas.html" class="block py-2 px-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:text-gray-200">VENTAS</a></li>
+                <li><a href="/PAGINA_WEB_CECYTE/pages_oferta_educativa/ecoturismo.html" class="block py-2 px-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:text-gray-200">ECOTURISMO</a></li>
+                <li><a href="/PAGINA_WEB_CECYTE/pages_oferta_educativa/produccion_industrial_de_alimentos.html" class="block py-2 px-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:text-gray-200">PRODUCCIÓN INDUSTRIAL DE ALIMENTOS</a></li>
+                <li><a href="/PAGINA_WEB_CECYTE/pages_oferta_educativa/mantenimiento_industrial.html" class="block py-2 px-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:text-gray-200">MATENIMIENTO INDUSTRIAL</a></li>
+                <li><a href="/PAGINA_WEB_CECYTE/pages_oferta_educativa/servicios_de_hoteleria.html" class="block py-2 px-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:text-gray-200">SERVICIOS DE HOTELERÍA</a></li>
+                
+              </ul>
+            </li>
+            <li>
+              <button class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-gray-100 md:border-0 md:hover:text-orange-700 md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-gray-700"
+                aria-expanded="false" aria-haspopup="true" onclick="toggleSubMenu('submenu-alumnos')">ALUMNOS</button>
+              <!-- Submenu for ALUMNOS -->
+              <ul id="submenu-alumnos" class="hidden absolute mt-2 w-48 bg-white shadow-lg rounded-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700" aria-label="submenu">
+                <li><a href="#" class="block py-2 px-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:text-gray-200">Horarios</a></li>
+                <li><a href="#" class="block py-2 px-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:text-gray-200">Calendario</a></li>
+                <li><a href="#" class="block py-2 px-4 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:text-gray-200">Actividades</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="block py-2 px-3 text-orange-700 rounded hover:bg-gray-100 md:hover:bg-gray-100 md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-gray-700">DOCENTES</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="w-full h-1 bg-orange-500"></div>
+    </nav>
+    <!-- FIN NAVBAR CON SUBEMENUS -->
+
+    
+    <!-- BOTON SUBIR INICIO -->
+    <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="fixed bottom-6 right-6 bg-green-500 text-white rounded-full p-3 shadow-md hover:bg-green-600 transition-all duration-300 ease-in-out">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
+      </svg>
+    </button>
+    <!-- BOTON SUBIR FIN -->
+    
+       
+
+    <!-- SECTION HERO INICIO -->
+    <section class="hero-section flex items-center justify-center bg-white-500">
+      <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row justify-between">
+          <div class="w-full md:w-1/2 p-8 animate__animated animate__fadeInLeft bg-green-500 flex items-center justify-center sticky top-0">
+            <!-- Left Div Content -->
+            <img src="img_logos/logo_Cecyte_vertical_sin_fondo.png" alt="Imagen" class="max-w-full mb-4">
+          </div>
+          <div class="w-full md:w-1/2 p-8 animate__animated animate__fadeInRight bg-orange-500">
+            <!-- Right Div Content -->
+            <h1 class="text-4xl font-bold text-white">Colegio de Estudios Científicos y Tecnológicos.</h1>
+            <p class="text-lg text-white mt-4">“Ciencia y Tecnología, Luz y Camino”</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SECTION HERO INICIO -->
+    
+    
+    
+    
+    
+    
+  <!-- INCIO SECTION DE MISION -->
+    <div class="bg-white py-12">
+      <div class="container mx-auto text-black text-center">
+        <h1 class="text-5xl font-bold mb-6">Nuestra Misión</h1>
+        <div class="section-separator-VERDE"></div>
+        <p class="text-2xl mb-8" style="text-align: justify;">
+          Asegurar la impartición de los servicios de Educación Media Superior en sus modalidades de bachillerato general y bachillerato tecnológico, conjugando convenientemente el conocimiento teórico que enfatice su vertiente propedéutica y el logro de competencias, habilidades y destrezas que den ascendencia a su línea tecnológica, así como facilitar el acceso al conocimiento y a la preparación técnica a los jóvenes, particularmente a los avecinados en el medio rural o semiurbano.
+      </p>
+      
+        <a href="#"  class="bg-green-500 hover:bg-green-1000 text-white font-bold py-2 px-8 rounded">Más sobre CecyteBCS</a>
+      </div>
+    </div>
+
+    <section class="text-center bg-white p-8 rounded-lg shadow-lg">
+      <h2 class="text-2xl font-bold text-gray-900">Noticias Destacadas</h2>
+      <div class="section-separator"></div>
+      <p class="text-gray-500">Última Actualización - Mayo 2024</p>
+    </section>
+    </div>
+    <!-- FIN SECTION DE MISION -->
+
+    
+      <!-- inicio de carousel  -->  
+      <section class="text-center bg-white p-8 rounded-lg shadow-lg">
+        <div id="gallery" class="relative w-full" data-carousel="slide">
+          <!-- Carousel wrapper -->
+          <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+            <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <a href="https://example.com/link-to-image-1">
+                <img src="img_recuros_pagina/img_noticias/consusantes_banner.jpg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover" alt="">
+                <p class="absolute bottom-0 left-0 right-0 bg-white bg-opacity-80 text-gray-800 p-2">El CECyTE B.C.S. Inicia Cursos Taller de Derechos Humanos</p>
+              </a>
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+              <a href="https://example.com/link-to-image-2">
+                <img src="img_recuros_pagina/img_noticias/futbol_baner.jpg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover" alt="">
+                <p class="absolute bottom-0 left-0 right-0 bg-white bg-opacity-80 text-gray-800 p-2">El CECyTE B.C.S. Inicia Cursos Taller de Derechos Humanos</p>
+              </a>
+            </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <a href="https://example.com/link-to-image-3">
+                <img src="img_recuros_pagina/img_noticias/bailes_banner.jpg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover" alt="">
+                <p class="absolute bottom-0 left-0 right-0 bg-white bg-opacity-80 text-gray-800 p-2">El CECyTE B.C.S. Inicia Cursos Taller de Derechos Humanos</p>
+              </a>
+            </div>
+            <!-- Item 4 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <a href="https://example.com/link-to-image-4">
+                <img src="img_recuros_pagina/img_noticias/volleyball_banner.jpg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover" alt="">
+                <p class="absolute bottom-0 left-0 right-0 bg-white bg-opacity-80 text-gray-800 p-2">El CECyTE B.C.S. Inicia Cursos Taller de Derechos Humanos</p>
+              </a>
+            </div>
+            <!-- Item 5 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <a href="https://example.com/link-to-image-5">
+                <img src="img_recuros_pagina/img_noticias/escolta_panoramica_banner.jpg" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover" alt="">
+                <p class="absolute bottom-0 left-0 right-0 bg-white bg-opacity-80 text-gray-800 p-2">El CECyTE B.C.S. Inicia Cursos Taller de Derechos Humanos</p>
+              </a>
+            </div>
+          </div>
+                <!-- Slider controls -->
+                <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                  <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-green-500 dark:bg-gray-800/30 group-hover:bg-green-500/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                    </svg>
+                    <span class="sr-only">Previous</span>
+                  </span>
+                </button>
+                <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                  <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-green-500 dark:bg-gray-800/30 group-hover:bg-green-500/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                    </svg>
+                    <span class="sr-only">Next</span>
+                  </span>
+                </button>
+              </div>
+      </section>
+      <!-- fin  de carousel  -->
+
+
+      <!-- INICIO CARD NOTICIAS -->
+      <section class="text-center bg-white p-8 rounded-lg shadow-lg">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <!-- Card 1 -->
+          <div class="bg-white rounded-lg shadow-md p-4">
+            <a href="#"><img src="img_recuros_pagina/img_noticias/ajedrez_noticias.jpg" alt="Card Image" class="w-full h-50 object-cover rounded-md mb-2" /></a>
+            <h3 class="text-xl font-semibold mb-1">Concurson de dibujo</h3>
+            <p class="text-gray-600">Descripción breve de la noticia. <a href="">ver mas</a></p>
+          </div>
+        
+          <!-- Card 2 -->
+          <div class="bg-white rounded-lg shadow-md p-4">
+            <img src="img_recuros_pagina/img_noticias/arteyculturapeidra_noticias.jpg" alt="Card Image" class="w-full h-50 object-cover rounded-md mb-2" />
+            <h3 class="text-xl font-semibold mb-1">Consurso de pintura</h3>
+            <p class="text-gray-600">Descripción breve de la noticia.</p>
+          </div>
+        
+          <!-- Card 3 -->
+          <div class="bg-white rounded-lg shadow-md p-4">
+            <img src="img_recuros_pagina/img_noticias/bailes_noticias.jpg" alt="Card Image" class="w-full h-50 object-cover rounded-md mb-2" />
+            <h3 class="text-xl font-semibold mb-1">Título de la Noticia 3</h3>
+            <p class="text-gray-600">Descripción breve de la noticia.</p>
+          </div>
+          <!-- Card 4 -->
+          <div class="bg-white rounded-lg shadow-md p-4">
+            <img src="img_recuros_pagina/img_noticias/cantante_noticas.jpg" alt="Card Image" class="w-full h-50 object-cover rounded-md mb-2" />
+            <h3 class="text-xl font-semibold mb-1">Título de la Noticia 3</h3>
+            <p class="text-gray-600">Descripción breve de la noticia.</p>
+          </div>
+          <!-- Card 4 -->
+          <div class="bg-white rounded-lg shadow-md p-4">
+            <img src="img_recuros_pagina/img_noticias/clausura_noticas.jpg" alt="Card Image" class="w-full h-50 object-cover rounded-md mb-2" />
+            <h3 class="text-xl font-semibold mb-1">Título de la Noticia 3</h3>
+            <p class="text-gray-600">Descripción breve de la noticia.</p>
+          </div>
+          <!-- Card 4 -->
+          <div class="bg-white rounded-lg shadow-md p-4">
+            <img src="img_recuros_pagina/img_noticias/clausura1_noticas.jpg" alt="Card Image" class="w-full h-50 object-cover rounded-md mb-2" />
+            <h3 class="text-xl font-semibold mb-1">Título de la Noticia 3</h3>
+            <p class="text-gray-600">Descripción breve de la noticia.</p>
+          </div>
+        </div>
+      </section>
+      <!-- FIN CARDS NOTICAS  -->
+      
+      <section class="text-center bg-white p-8 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold text-gray-900">CONVOCATORIAS</h2>
+        <div class="section-separator-VERDE"></div>
+        <p class="text-gray-500">Última Actualización - Mayo 2024</p>
+      </section>
+
+      <section class="w-full max-h-full bg-white bg-gray-200 p-8 rounded-lg shadow-lg flex flex-wrap items-center justify-center">
+        <div class="max-w-xl p-4">
+            <img src="img_recuros_pagina/CONVOCATORIOAS/BANNERS/BANNER_ARTEYCULTURA.png" alt="Imagen de ejemplo 1" class="w-full h-auto rounded-lg shadow-lg">
+        </div>
+        <div class="max-w-xl p-4">
+            <img src="img_recuros_pagina/CONVOCATORIOAS/BANNERS/EXAMEN_NUEVO_INGRESO.png" alt="Imagen de ejemplo 2" class="w-full h-auto rounded-lg shadow-lg">
+        </div>
+       
+    </section>
+    
+    
+    
+    
+    
+      
+    
+
+    <section class="text-center bg-white p-8 rounded-lg shadow-lg">
+      <h2 class="text-2xl font-bold text-gray-900">CONOCE NUESTRAS CARRERAS</h2>
+      <div class="section-separator-VERDE"></div>
+      <p class="text-gray-500">Última Actualización - Mayo 2024</p>
+    </section>
+
+    <div
+      class="text-center bg-white p-8 rounded-lg shadow-lg flex flex-wrap justify-center gap-4"
+    >
+      <!-- Card 1: Programming -->
+      <div
+        class="max-w-sm rounded overflow-hidden shadow-lg p-4 mb-4 flex-grow"
+      >
+        <div
+          class="flex items-center justify-center h-12 w-12 bg-green-500 text-white rounded-full"
+        >
+          <i class="fa-solid fa-laptop"></i>
+        </div>
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2 text-left">PROGRAMACIÓN</div>
+          <p class="text-gray-700 text-base w-full" >
+            La carrera de Técnico en programación ofrece las competencias
+            profesionales que permiten al estudiante realizar actividades
+            dirigidas a: analizar, diseñar, desarrollar, instalar y mantener
+            software de aplicación.
+          </p>
+        </div>
+        <div class="section-separator"></div>
+        <div class="px-6 pt-4 pb-2">
+          <button
+            class="bg-green-500 hover:bg-green-1000 text-white font-bold py-2 px-8 rounded"
+          >
+            <a href="pages_oferta_educativa/programacion.html">Aprender Más</a>
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 2: Support and Maintenance -->
+      <div
+        class="max-w-sm rounded overflow-hidden shadow-lg p-4 mb-4 flex-grow"
+      >
+        <div
+          class="flex items-center justify-center h-12 w-12 bg-orange-500 text-white rounded-full"
+        >
+          <i class="fa-solid fa-wrench"></i>
+        </div>
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2 text-left">
+            SOPORTE Y MANTENIMIENTO DE EQUIPO DE CÓMPUTO
+          </div>
+          <p class="text-gray-700 text-base w-full">
+            La carrera de Técnico en soporte y mantenimiento de equipo de
+            cómputo se desarrolla como vertiente de la carrera de Informática y
+            ofrece las competencias profesionales que permiten un desarrollo
+            personal.
+          </p>
+        </div>
+        <div class="section-separator"></div>
+        <div class="px-6 pt-4 pb-2">
+          <button
+            class="bg-orange-500 hover:bg-green-1000 text-white font-bold py-2 px-8 rounded"
+          >
+            <a href="pages_oferta_educativa/mantenimiento_equipo_de_computo.html">Aprender Más</a>
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 3: Ecotourism -->
+      <div
+        class="max-w-sm rounded overflow-hidden shadow-lg p-4 mb-4 flex-grow"
+      >
+        <div
+          class="flex items-center justify-center h-12 w-12 bg-green-500 text-white rounded-full"
+        >
+          <i class="fa-brands fa-pagelines"></i>
+        </div>
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2 text-left">ECOTURISMO</div>
+          <p class="text-gray-700 text-base w-full">
+            La carrera de Técnico en Ecoturismo ofrece las competencias
+            profesionales que permiten al egresado realizar actividades basadas
+            en las necesidades detectadas en el ramo del turismo, el cual genera
+            una gran derrama económica naturaleza.
+          </p>
+        </div>
+        <div class="section-separator"></div>
+        <div class="px-6 pt-4 pb-2">
+          <button
+            class="bg-green-500 hover:bg-green-1000 text-white font-bold py-2 px-8 rounded"
+          >
+            <a href="pages_oferta_educativa/ecoturismo.html">Aprender Más</a>
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 3: PRODUCCIÓN INDUSTRIAL DE ALIMENTOS -->
+      <div
+        class="max-w-sm rounded overflow-hidden shadow-lg p-4 mb-4 flex-grow"
+      >
+        <div
+          class="flex items-center justify-center h-12 w-12 bg-orange-500 text-white rounded-full"
+        >
+          <i class="fa-solid fa-hippo"></i>
+        </div>
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2 text-left">
+            PRODUCCIÓN INDUSTRIAL DE ALIMENTOS
+          </div>
+          <p class="text-gray-700 text-base w-full">
+            Las tendencias globalizadoras, actualmente exigen mayor
+            competitividad y profesionalismo del recurso humano, como pieza
+            clave en el desarrollo nacional.
+          </p>
+        </div>
+        <div class="section-separator"></div>
+        <div class="px-6 pt-4 pb-2">
+          <button
+            class="bg-orange-500 hover:bg-orange-1000 text-white font-bold py-2 px-8 rounded"
+          >
+           <a href="pages_oferta_educativa/produccion_industrial_de_alimentos.html"> Aprender Más</a>
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 3: MATENIMIENTO INDUSTRIAL-->
+      <div
+        class="max-w-sm rounded overflow-hidden shadow-lg p-4 mb-4 flex-grow"
+      >
+        <div
+          class="flex items-center justify-center h-12 w-12 bg-green-500 text-white rounded-full"
+        >
+          <i class="fa-solid fa-gear"></i>
+        </div>
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2 text-left">
+            MATENIMIENTO INDUSTRIAL
+          </div>
+          <p class="text-gray-700 text-base w-full">
+            La carrera de Técnico en mantenimiento industrial ofrece las
+            competencias profesionales que permiten al estudiante realizar
+            actividades dirigidas a realizar mantenimiento a instalaciones
+            eléctricas, fabricar pequeñas estructuras metálicas.
+          </p>
+        </div>
+        <div class="section-separator"></div>
+        <div class="px-6 pt-4 pb-2">
+          <button
+            class="bg-green-500 hover:bg-green-1000 text-white font-bold py-2 px-8 rounded"
+          >
+            <a href="pages_oferta_educativa/mantenimiento_industrial.html">Aprender Más</a>
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 3: SERVICIOS DE HOTELERÍA -->
+      <div
+        class="max-w-sm rounded overflow-hidden shadow-lg p-4 mb-4 flex-grow"
+      >
+        <div
+          class="flex items-center justify-center h-12 w-12 bg-orange-500 text-white rounded-full"
+        >
+          <i class="fa-solid fa-hotel"></i>
+        </div>
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2 text-left">
+            SERVICIOS DE HOTELERÍA
+          </div>
+          <p class="text-gray-700 text-base w-full">
+            a carrera de Técnico en Servicios de Hotelería ofrece las
+            competencias profesionales que permiten al egresado realizar
+            actividades basadas en las necesidades detectadas en el ramo del
+            hotelería, la cual genera una gran derrama económica.
+          </p>
+        </div>
+        <div class="section-separator"></div>
+        <div class="px-6 pt-4 pb-2">
+          <button
+            class="bg-orange-500 hover:bg-orange-1000 text-white font-bold py-2 px-8 rounded"
+          >
+            <a href="pages_oferta_educativa/servicios_de_hoteleria.html">Aprender Más</a>
+          </button>
+        </div>
+      </div>
+      <!-- Card 3: VENTAS -->
+      <div
+        class="max-w-sm rounded overflow-hidden shadow-lg p-4 mb-4 flex-grow"
+      >
+        <div
+          class="flex items-center justify-center h-12 w-12 bg-green-500 text-white rounded-full"
+        >
+          <i class="fa-solid fa-briefcase"></i>
+        </div>
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2 text-left">VENTAS</div>
+          <p class="text-gray-700 text-base w-full">
+            La carrera de Técnico en ventas ofrece las competencias
+            profesionales que permiten al estudiante realizar actividades
+            dirigidas a posicionar un producto o servicio de una empresa en el
+            mercado, auxiliar en el proceso de administración del área de ventas
+            y en la elaboración del estudio de mercado.
+          </p>
+        </div>
+        <div class="section-separator"></div>
+        <div class="px-6 pt-4 pb-2">
+          <button
+            class="bg-green-500 hover:bg-green-1000 text-white font-bold py-2 px-8 rounded"
+          >
+            <a href="pages_oferta_educativa/ventas.html">Aprender Más</a>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    
+
+
+    
+
+    <footer class="bg-white dark:bg-gray-900">
+      <div class="border-t-4 border-gray-400 dark:border-gray-1000"></div>
+      <div class="mx-auto w-full max-w-screen-xl">
+        <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+          <div>
+            <h2
+              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+            >
+              Sitios de Interés
+            </h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li class="mb-4">
+                <a href="https://itaibcs.net/" class="hover:underline"
+                  >ITAI del Estado de B.C.S.</a
+                >
+              </li>
+              <li class="mb-4">
+                <a
+                  href="https://transparencia.cre.gob.mx/plataforma-nacional-de-transparencia-sipot/"
+                  class="hover:underline"
+                  >SIPOT</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2
+              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+            >
+              Domicilio
+            </h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li class="mb-4">
+                <p>Golfo de California No. 190</p>
+              </li>
+              <li class="mb-4">
+                <p>Col. El Conchalito.</p>
+              </li>
+              <li class="mb-4">
+                <p>Cp: 23090</p>
+              </li>
+              <li class="mb-4">
+                <p>La Paz B.C.S</p>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2
+              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+            >
+              Teléfonos
+            </h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li class="mb-4">
+                <a href="#" class="hover:underline">612 - 12 32244</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">612 - 12 40430</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">612 - 12 40656</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">612 - 12 40656</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2
+              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+            >
+              SIGUENOS
+            </h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li class="mb-4">
+                <a
+                  href="https://www.facebook.com/DGCECYTEBCS"
+                  class="hover:underline"
+                  >FACEBOOK</a
+                >
+              </li>
+
+              <li class="mb-4">
+                <a
+                  href="https://x.com/CECYTE_BCS?lang=es"
+                  class="hover:underline"
+                  >x</a
+                >
+              </li>
+              <li class="mb-4">
+                <a
+                  href="https://www.youtube.com/channel/UCAjoT3ODBsMhq75-KFJuNYA"
+                  class="hover:underline"
+                  >YOUTUBE</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center p-4 bg-gray-800 text-white text-sm">
+        © 2024 Departamento de Informática. Todos los derechos reservados.
+      </div>
+    </footer>
+
+    <script>
+      
+      const menuToggle = document.getElementById("menu-toggle");
+      const navbar = document.getElementById("navbar-default");
+
+
+      document.addEventListener('DOMContentLoaded', function() {
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 50) {
+        navbar.classList.remove('navbar-transparent');
+        navbar.classList.add('navbar-white');
+      } else {
+        navbar.classList.remove('navbar-white');
+        navbar.classList.add('navbar-transparent');
+      }
+    });
+  });
+
+      function toggleSubMenu(id) {
+    const submenus = document.querySelectorAll('[aria-label="submenu"]');
+    submenus.forEach(submenu => {
+      if (submenu.id !== id) {
+        submenu.classList.add('hidden');
+        const button = document.querySelector(`[onclick="toggleSubMenu('${submenu.id}')"]`);
+        if (button) {
+          button.setAttribute('aria-expanded', 'false');
+        }
+      }
+    });
+
+    const submenu = document.getElementById(id);
+    submenu.classList.toggle('hidden');
+    const button = document.querySelector(`[onclick="toggleSubMenu('${id}')"]`);
+    const expanded = button.getAttribute('aria-expanded') === 'true' || false;
+    button.setAttribute('aria-expanded', !expanded);
+  }
+
+  function cancelClose(id) {
+    const submenu = document.getElementById(id);
+    submenu.classList.remove('hidden');
+  }
+      
+    </script>
+  </body>
+</html>
